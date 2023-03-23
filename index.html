@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan cenowy</title>
+  </head>
+
+  <body>
+    <div id="home-page">
+      <div class="container">
+        <div class="pricing-component">
+          <div class="pricing-component__header">
+            <div class="pricing-component__title">Pricing</div>
+            <div class="pricing-component__subtitle">
+              Choose the right pricing for you and get started with your
+              project.
+            </div>
+          </div>
+          <div class="pricing-component__boxes">
+            <div class="pricing-component__box" style="--bg-color: #fff">
+              <div class="pricing-component__box-content">
+                <div class="pricing-component__box-title">Basic</div>
+                <div class="pricing-component__box-price">
+                  <span class="pricing-component__dollar">$</span>
+                  399
+                  <span class="pricing-component__lower-text">/year</span>
+                </div>
+                <div class="pricing-component__box-description">
+                  For organizing every corner of your work & life.
+                </div>
+                <div class="pricing-component__box-list">
+                  <ul>
+                    <li class="pricing-component__list">
+                      Collaborative workspace
+                    </li>
+                    <li class="pricing-component__list">7 day page history</li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="pricing-component__box-button"
+                style="--bg-color: #14132b; --font-color: #fff"
+              >
+                Get started
+              </button>
+            </div>
+
+            <div
+              class="pricing-component__box"
+              style="--bg-color: #14132b; --font-color: #fff"
+            >
+              <div class="pricing-component__box-content">
+                <div class="pricing-component__box-title">Professional</div>
+                <div class="pricing-component__box-price">
+                  <span class="pricing-component__dollar">$</span>
+                  499
+                  <span class="pricing-component__lower-text">/year</span>
+                </div>
+                <div class="pricing-component__box-description">
+                  A place for small groups to plan & get organized.
+                </div>
+                <div class="pricing-component__box-list">
+                  <ul>
+                    <li class="pricing-component__list">
+                      All features in Basic
+                    </li>
+                    <li class="pricing-component__list">
+                      Unlimited blocks for teams
+                    </li>
+                    <li class="pricing-component__list">30 day page history</li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="pricing-component__box-button"
+                style="--bg-color: #7863f9"
+              >
+                Get started
+              </button>
+            </div>
+
+            <div class="pricing-component__box" style="--bg-color: #fff">
+              <div class="pricing-component__box-content">
+                <div class="pricing-component__box-title">Enterprise</div>
+                <div class="pricing-component__box-price">
+                  <span class="pricing-component__dollar">$</span>
+                  599
+                  <span class="pricing-component__lower-text">/year</span>
+                </div>
+                <div class="pricing-component__box-description">
+                  For companies using our software to connect several teams &
+                  tools.
+                </div>
+                <div class="pricing-component__box-list">
+                  <ul>
+                    <li class="pricing-component__list">SAML SSO</li>
+                    <li class="pricing-component__list">Private teamspaces</li>
+                    <li class="pricing-component__list">
+                      Advanced page analytics
+                    </li>
+                    <li class="pricing-component__list">90 day page history</li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="pricing-component__box-button"
+                style="--bg-color: #14132b; --font-color: #fff"
+              >
+                Get started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="loader"></div>
+    </div>
+
+    <script type="module" src="/src/global-scripts/main.js"></script>
+    <script
+      type="module"
+      src="/src/pages/home-page/scripts/home-page.js"
+    ></script>
+  </body>
+</html>

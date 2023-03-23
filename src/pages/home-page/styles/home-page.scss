@@ -1,0 +1,193 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+@import "/src/global-styles/styles/root.scss";
+@import "/src/pages/home-page/styles/loader.scss";
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-source-sans);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-component {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 48px;
+  margin: 35px;
+
+  & &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 244px;
+  }
+
+  & &__title {
+    color: var(--basic-dark-color);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+  }
+
+  & &__subtitle {
+    color: var(--secondary-gray-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+
+  & &__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  & &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    width: 258px;
+    border-radius: 24px;
+    border: 1px solid var(--box-border-color);
+    padding: 32px;
+    color: var(--font-color);
+  }
+
+  & &__box-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+  }
+
+  & &__box-price {
+    position: relative;
+    left: 9px;
+    max-width: 114px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+    margin: 12px 0 22px;
+  }
+
+  & &__dollar {
+    position: absolute;
+    top: 4px;
+    left: -9px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  & &__lower-text {
+    position: absolute;
+    right: 6px;
+    top: 2px;
+    color: var(--secondary-gray-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    top: 30px;
+    right: 10px;
+  }
+
+  & &__box-description {
+    color: var(--secondary-gray-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    letter-spacing: -0.01em;
+    margin-bottom: 15px;
+  }
+
+  & &__list {
+    list-style: none;
+    padding-left: 28px;
+    background-image: url("/src/list img.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  & &__box:nth-child(2) .pricing-component__list {
+    background-image: url("/src/list-img-dark.png");
+  }
+
+  & &__list:last-child {
+    margin-bottom: 22px;
+  }
+
+  & &__box-button {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    padding: 17px 32px;
+    border: none;
+    border-radius: 16px;
+  }
+
+  & &__box-button:hover {
+    opacity: 0.7;
+    transition: 0.7s;
+    cursor: grab;
+  }
+
+  @media (max-width: 834px) {
+
+    & &__box {
+        width: 100%;
+        max-width: 674px;
+        column-count: 2
+
+    }
+
+    & &__box-content {
+      display: flex;
+      flex-direction: column;
+      column-count: 2;
+      justify-content: space-between;
+      
+    }
+    
+    & &__box-price {
+         text-align: right;
+        display: flex;
+        column-count: 2;
+        //align-self: flex-end;
+     }
+  }
+
+  & &__box-button {
+    max-width: 260px;
+  }
+}
