@@ -67,7 +67,7 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--bg-color);
-    max-width: 258px;
+    width: 258px;
     border-radius: 24px;
     border: 1px solid var(--box-border-color);
     padding: 32px;
@@ -119,6 +119,7 @@ ul {
     line-height: 22.4px;
     letter-spacing: -0.01em;
     margin-bottom: 15px;
+    max-width: 244px;
   }
 
   & &__box-list {
@@ -168,60 +169,96 @@ ul {
   }
 
   @media (max-width: 1075px) {
+    & &__boxes {
+      gap: 14px;
+    }
     & &__box {
       width: 100%;
-      max-width: 674px;
+      max-width: 609px;
     }
 
     & &__box-content {
       display: flex;
       flex-direction: column;
-      //justify-content: space-between;
     }
 
     & &__box-head {
       width: 100%;
+      max-height: 42px;
+      margin-bottom: -10px;
       display: flex;
       justify-content: space-between;
+      gap: 16px;
     }
 
     & &__box-price {
       margin: 0 66px 0 0;
+      left: 31px;
+      top: -5px;
     }
 
     & &__lower-text {
-      right: -32px;
+      left: 72px;
     }
 
     & &__box-list {
       flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: -10px;
     }
 
     & &__box-button {
       align-self: flex-end;
       width: 100%;
-      max-width: 263px;
+      max-width: 260px;
+    }
+    #button-pro {
+      margin-top: -30px;
+    }
+
+    #button-enter {
+      margin-top: -60px;
     }
   }
   @media (max-width: 425px) {
+    margin: 35px 24px;
 
+    & &__boxes {
+        gap: 15px;
+    }
     & &__box {
-        align-items: stretch;
+      max-width: 327px;
     }
     & &__box-head {
       flex-direction: column;
+      margin-bottom: 63px;
     }
 
+    & &__box-price {
+      left: 10px;
+    }
     & &__lower-text {
       left: 70px;
     }
 
-    & &__box-list {
-      flex-direction: column;
+    & &__box-description {
+      margin-bottom: 5px;
     }
 
     & &__box-button {
       align-self: center;
     }
+
+    #button-basic {
+        margin-top: 72px;
+    }
+
+    #button-pro {
+        margin-top: 42px;
+      }
+
+      #button-enter {
+        margin-top: 14px;
+      }
   }
 }
