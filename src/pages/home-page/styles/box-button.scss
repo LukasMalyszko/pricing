@@ -1,0 +1,77 @@
+.pricing-component {
+  & &__box-button {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    padding: 17px 32px;
+    border: none;
+    border-radius: 16px;
+
+    &[data-loading="0"] {
+      .loading {
+        display: none;
+      }
+
+      .text {
+        display: block;
+      }
+    }
+
+    &[data-loading="1"] {
+      .loading {
+        display: block;
+      }
+
+      .text {
+        display: none;
+      }
+    }
+  }
+
+  & &__box-button:hover {
+    background-color: var(--bg-hover-color);
+    transition: 0.7s;
+    cursor: pointer;
+  }
+
+  & &__box-button:active {
+    background-color: var(--bg-active-color);
+  }
+
+  @media (max-width: 1075px) {
+    & &__box-button {
+      align-self: flex-end;
+      width: 100%;
+      max-width: 260px;
+    }
+    .button-pro-margin {
+      margin-top: -28px;
+    }
+
+    .button-enter-margin {
+      margin-top: -58px;
+    }
+  }
+
+  @media (max-width: 585px) {
+    & &__box-button {
+      max-width: 100%;
+      align-self: center;
+    }
+
+    .button-basic-margin {
+      margin-top: 72px;
+    }
+
+    .button-pro-margin {
+      margin-top: 42px;
+    }
+
+    .button-enter-margin {
+      margin-top: 14px;
+    }
+  }
+}
