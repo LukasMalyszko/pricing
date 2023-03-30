@@ -9,6 +9,11 @@
     padding: 17px 32px;
     border: none;
     border-radius: 16px;
+    height: 48px;
+
+    img {
+        width: 32px;
+      }
 
     &[data-loading="0"] {
       .loading {
@@ -21,6 +26,8 @@
     }
 
     &[data-loading="1"] {
+        padding: 7px;
+
       .loading {
         display: block;
       }
@@ -29,6 +36,12 @@
         display: none;
       }
     }
+
+    &[disabled] {
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
   }
 
   & &__box-button:hover {
@@ -47,12 +60,17 @@
       width: 100%;
       max-width: 260px;
     }
+
+    .button-basic-margin {
+        margin-top: 14px;
+      }
+
     .button-pro-margin {
-      margin-top: -28px;
+      margin-top: -16px;
     }
 
     .button-enter-margin {
-      margin-top: -58px;
+      margin-top: -44px;
     }
   }
 
@@ -63,15 +81,15 @@
     }
 
     .button-basic-margin {
-      margin-top: 72px;
+      margin-top: 86px;
     }
 
     .button-pro-margin {
-      margin-top: 42px;
+      margin-top: 56px;
     }
 
     .button-enter-margin {
-      margin-top: 14px;
+      margin-top: 27px;
     }
   }
 }

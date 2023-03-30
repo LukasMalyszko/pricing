@@ -7,19 +7,21 @@ import "../styles/home-page.scss";
 
 //  setupCounter(document.querySelector('#counter'))
 
-let buttons = document.getElementsByTagName("button");
+let buttons = document.querySelectorAll(".pricing-component__box-button");
+let loading = false;
+
 function setLoading() {
+  if (loading) return null;
   this.setAttribute("data-loading", "1");
   this.disabled = false;
+  loading = true;
   for (let i = 0; i < buttons.length; i++) {
-      buttons[i].style.padding = "0";
-      if (buttons[i] !== this) {
-          buttons[i].disabled = true;
-          buttons[i].style.padding = "17px";
-        }
+    if (buttons[i] !== this) {
+      buttons[i].disabled = true;
     }
+  }
 }
 
 for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", setLoading);
+  buttons[i].addEventListener("click", setLoading);
 }
