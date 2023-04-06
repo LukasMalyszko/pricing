@@ -10,7 +10,7 @@
     border: none;
     border-radius: 16px;
     height: 48px;
-
+    transition: background-color 0.7s;
     img {
         width: 32px;
       }
@@ -46,7 +46,6 @@
 
   & &__box-button:hover {
     background-color: var(--bg-hover-color);
-    transition: 0.7s;
     cursor: pointer;
   }
 
